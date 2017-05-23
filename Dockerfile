@@ -6,20 +6,15 @@ ENV APP_POWERAI_VERSION 1
 ADD https://raw.githubusercontent.com/nimbix/notebook-common/master/install-ubuntu.sh /tmp/install-ubuntu.sh
 RUN bash /tmp/install-ubuntu.sh && rm -f /tmp/install-ubuntu.sh
 
+RUN apt-get -y install build-essential libssl-dev libffi-dev python-dev python-matplotlib python-lxml python-scipy libxml2-dev libxmlsec1-dev && apt-get clean
 RUN pip install pandas_datareader && \
     pip install httplib2 && \
     pip install watson_developer_cloud && \
-    apt-get -y install build-essential libssl-dev libffi-dev python-dev && \
     pip install quandl && \
-    apt-get -y install python-matplotlib && \
     pip install nytimesarticle && \
-    apt-get -y install python-lxml && \
     pip install cython && \
-    apt-get -y install python-scipy && \
     pip install scikit-learn && \
-    apt-get -y install libxml2-dev libxmlsec1-dev && \
-    pip install dragnet && \
-    apt-get clean
+    pip install dragnet
 
 COPY NAE/help.html /etc/NAE/help.html
 COPY NAE/screenshot.png /etc/NAE
