@@ -14,7 +14,8 @@ RUN pip install pandas_datareader && \
     pip install nytimesarticle && \
     pip install cython && \
     pip install scikit-learn && \
-    pip install dragnet
+    pip install dragnet && \
+    pip install ijson
 
 COPY NAE/help.html /etc/NAE/help.html
 COPY NAE/screenshot.png /etc/NAE
