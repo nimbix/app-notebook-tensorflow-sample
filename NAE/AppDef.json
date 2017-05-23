@@ -15,10 +15,7 @@
         "np8gk1"
     ],
     "vault-types": [
-        "FILE",
-        "BLOCK",
-        "BLOCK_ARRAY",
-        "OBJECT"
+        "NONE"
     ],
     "commands": {
         "TensorFlow": {
