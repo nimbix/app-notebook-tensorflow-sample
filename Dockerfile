@@ -25,5 +25,6 @@ RUN curl --fail -X POST -d @/etc/NAE/AppDef.json https://api.jarvice.com/jarvice
 
 WORKDIR /usr/local/samples
 RUN git clone https://github.com/fbarilla/MLDL-demo.git
+RUN cd MLDL-demo && git pull
 
 COPY scripts/sample_notebook.sh /usr/local/scripts/sample_notebook.sh
