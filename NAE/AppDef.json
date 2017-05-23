@@ -31,7 +31,7 @@
                     "name": "-s",
                     "description": "-s",
                     "type": "CONST",
-                    "value": "/opt/DL/chainer/bin/tensorflow-activate",
+                    "value": "/opt/DL/tensorflow/bin/tensorflow-activate",
                     "positional": false,
                     "required": true
                 },
